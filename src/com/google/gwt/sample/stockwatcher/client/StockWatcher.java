@@ -34,6 +34,11 @@ public class StockWatcher implements EntryPoint {
 	private TextBox teSymbol;
 	private Button butAdd;
 	private Label lblLastUpdate;
+
+	private int stuff;
+	private String otherstuff;
+	private TextBox morestuff;
+	
 	
 	private TreeMap<String, StockInfo> stocks;
 	private static final int REFRESH_INTERVAL = 5000;
@@ -47,6 +52,9 @@ public class StockWatcher implements EntryPoint {
 		teSymbol = new TextBox();
 		butAdd = new Button("Add");
 		lblLastUpdate = new Label();
+		stuff = 0xff543;
+		otherstuff = "hope this actually makes the merge conflict";
+		morestuff = new TextBox();
 		
 		stocks = new TreeMap<String, StockInfo>();
 	}
@@ -73,7 +81,8 @@ public class StockWatcher implements EntryPoint {
 					loadLogin();
 			}
 		});
-		loadStockWatcher();
+
+		//loadStockWatcher();
 	}
 	
 	private void loadLogin(){
